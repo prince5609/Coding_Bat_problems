@@ -1,19 +1,22 @@
-''' QUESTION :
+""" QUESTION :
 We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling.
 We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
 
 monkey_trouble(True, True) → True
 monkey_trouble(False, False) → True
 monkey_trouble(True, False) → False
-'''
+"""
 
-def monkey_trouble(a,b):
-    if a==True and b==True:
+
+def monkey_trouble(a, b):
+    if a and b:
         return True
-    if a==False and b==False:
+    if not a and not b:
         return True
     else:
         return False
+
+
 print(monkey_trouble(True, True))
 print(monkey_trouble(False, False))
 print(monkey_trouble(True, False))
